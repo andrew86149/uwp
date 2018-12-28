@@ -19,5 +19,32 @@
                 <TextBlock Name="pname" Margin="5" FontSize="32"/>
             </CommandBar.Content>
         </CommandBar>
+        <Grid Grid.Row="1">
+            <Canvas SizeChanged="Canvas_SizeChanged" Margin="0 0 96 96">
+                <Grid Name="ballContainer" Width="96" Height="96">
+                    <Ellipse Name="ellipse">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="{Binding ElementName=brushSimulator,Path=ImageSource}"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <local:RadialGradientBrushSimulator x:Name="brushSimulator" 
+                                                        InnerColor="White" OuterColor="Red" GradientOrigin="0.3 0.3"/>
+                </Grid>
+            </Canvas>
+        </Grid>
     </Grid>
+    <Page.Triggers>
+        <EventTrigger>
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation x:Name="leftAnima" Storyboard.TargetName="ballContainer" 
+                                     Storyboard.TargetProperty="(Canvas.Left)"
+                                     From="0" Duration="0:0:2.51" AutoReverse="True" RepeatBehavior="Forever"/>
+                    <DoubleAnimation x:Name="rightAnima" Storyboard.TargetName="ballContainer" 
+                                     Storyboard.TargetProperty="(Canvas.Top)"
+                                     From="0" Duration="0:0:1.01" AutoReverse="True" RepeatBehavior="Forever"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Page.Triggers>
 </Page>

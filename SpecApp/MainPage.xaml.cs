@@ -89,14 +89,29 @@ namespace SpecApp
                         this.Frame.Navigate(typeof(Page10));
                         break;
                     }
-                case "test11":
+                case "CustomGradient":
                     {
                         this.Frame.Navigate(typeof(Page11));
                         break;
                     }
-                case "test12":
+                case "RadialGrBrDemo":
                     {
                         this.Frame.Navigate(typeof(Page12));
+                        break;
+                    }
+                case "test13":
+                    {
+                        this.Frame.Navigate(typeof(Page13));
+                        break;
+                    }
+                case "test14":
+                    {
+                        this.Frame.Navigate(typeof(Page14));
+                        break;
+                    }
+                case "test15":
+                    {
+                        this.Frame.Navigate(typeof(Page15));
                         break;
                     }
                 default:

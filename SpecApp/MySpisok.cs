@@ -27,6 +27,8 @@ namespace SpecApp
             spis[8] = "XYSlider";
             spis[9] = "CenteredTransforms";
             spis[10] = "DialSketch";
+            spis[11] = "CustomGradient";
+            spis[12] = "RadialGrBrDemo";
         }
     }
 }

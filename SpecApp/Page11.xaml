@@ -15,9 +15,61 @@
         </Grid.RowDefinitions>
         <CommandBar>
             <AppBarButton Icon="Back" Click="AppBarButton_Click"/>
+            <AppBarButton Icon="Emoji" Click="AppBarButton_Click_1"/>
+            <AppBarButton Icon="Emoji2" Click="AppBarButton_Click_2"/>
+            <AppBarButton Icon="Emoji2" Click="AppBarButton_Click_3"/>
+            <AppBarButton Icon="Emoji2" Click="AppBarButton_Click_4"/>
             <CommandBar.Content>
                 <TextBlock Name="pname" Margin="5" FontSize="32"/>
             </CommandBar.Content>
         </CommandBar>
+        <Grid Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0"
+                    Source="PetzoldJersey.jpg" HorizontalAlignment="Center"/>
+                <Image Grid.Row="1" 
+                    Name="reflectedImage" 
+                   RenderTransformOrigin="0 0.5" HorizontalAlignment="Center">
+                    <Image.RenderTransform>
+                        <ScaleTransform ScaleY="-1"/>
+                    </Image.RenderTransform>
+                </Image>
+            </Grid>
+            
+            <Image Name="image"/>
+            <Rectangle Width="576" Height="576">
+                <Rectangle.Fill>
+                    <ImageBrush x:Name="imRect"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Ellipse Width="576"
+                 Height="576"
+                 StrokeThickness="48"
+                 RenderTransformOrigin="0.5 0.5">
+                <Ellipse.Stroke>
+                    <ImageBrush x:Name="imageBrush" />
+                </Ellipse.Stroke>
+
+                <Ellipse.RenderTransform>
+                    <RotateTransform x:Name="rotate" />
+                </Ellipse.RenderTransform>
+            </Ellipse>
+        </Grid>
     </Grid>
+    <Page.Triggers>
+        <EventTrigger>
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="rotate"
+                                     Storyboard.TargetProperty="Angle"
+                                     From="0" To="360" Duration="0:0:3"
+                                     RepeatBehavior="Forever" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Page.Triggers>
 </Page>

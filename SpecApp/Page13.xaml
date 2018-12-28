@@ -1,0 +1,110 @@
+﻿<Page
+    x:Class="SpecApp.Page13"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SpecApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <CommandBar>
+            <AppBarButton Icon="Back" Click="AppBarButton_Click"/>
+            <AppBarButton Icon="Emoji" Click="AppBarButton_Click"/>
+            <AppBarButton Icon="Emoji2" Click="AppBarButton_Click"/>
+            <AppBarButton Icon="Emoji2" Click="AppBarButton_Click"/>
+            <CommandBar.Content>
+                <TextBlock Name="pname" Margin="5" FontSize="32"/>
+            </CommandBar.Content>
+        </CommandBar>
+        <Grid Background="Gray" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Name="txtblk"
+                   Grid.Row="0"
+                   HorizontalAlignment="Center"
+                   FontSize="18" />
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid Name="controlPanelGrid" Grid.Column="0"  Margin="12 0" 
+                      HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="Red" Grid.Row="0" Grid.Column="0" />
+                    <TextBlock Text="Green" Grid.Row="0" Grid.Column="1" />
+                    <TextBlock Text="Blue" Grid.Row="0" Grid.Column="2" />
+                    <TextBlock Text="All" Grid.Row="0" Grid.Column="3" />
+
+                    <CheckBox Name="monochromeCheckBox"
+                      Content="Monochrome"
+                      Grid.Row="9"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="4"
+                      Margin="0 12"
+                      HorizontalAlignment="Center"
+                      Checked="OnCheckBoxChecked"
+                      Unchecked="OnCheckBoxChecked" />
+                </Grid>
+                <Image Name="image"  Grid.Column="1" />
+
+            </Grid>
+        </Grid>
+    </Grid>
+    <Page.BottomAppBar>
+        <AppBar IsOpen="False">
+            <Grid>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+
+                    <AppBarButton Name="rotateLeftButton" IsEnabled="False"
+                            Content="&#x21B6;"
+                            AutomationProperties.Name="Rotate Left"
+                            Click="OnRotateLeftAppBarButtonClick" />
+
+                    <AppBarButton Name="rotateRightButton" IsEnabled="False"
+                            Content="&#x21B7;"
+                            AutomationProperties.Name="Rotate Right"
+                            Click="OnRotateRightAppBarButtonClick" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right">
+
+                    <AppBarButton Icon="OpenFile" Click="OnOpenAppBarButtonClick" />
+
+                    <AppBarButton Icon="Save" Name="saveAsButton"  IsEnabled="False"
+                            AutomationProperties.Name="Save As"
+                            Click="OnSaveAsAppBarButtonClick" />
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
+</Page>

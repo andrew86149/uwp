@@ -20,22 +20,16 @@ namespace SpecApp
     /// <summary>
     /// Пустая страница, которую можно использовать саму по себе или для перехода внутри фрейма.
     /// </summary>
-    public sealed partial class Page12 : Page
+    public sealed partial class Page14 : Page
     {
-        public Page12()
+        public Page14()
         {
             this.InitializeComponent();
-            pname.Text = "Page 12";
+            pname.Text = "Page 14";
         }
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.GoBack();
-        }
-
-        private void Canvas_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            leftAnima.To = e.NewSize.Width;
-            rightAnima.To = e.NewSize.Height;
         }
     }
 }
