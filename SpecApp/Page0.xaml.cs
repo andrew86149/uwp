@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Devices.Sensors;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Graphics.Display;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -23,6 +25,7 @@ namespace SpecApp
     /// </summary>
     public sealed partial class Page0 : Page
     {
+        SimpleOrientationSensor simpleOrientationSensor = SimpleOrientationSensor.GetDefault();
         DisplayInformation displayInformation;
 
         public Page0()
@@ -38,7 +41,28 @@ namespace SpecApp
             {
                 UpdateDisplay();
             };
+
+            if (simpleOrientationSensor != null)
+            {
+                SetOrientationSensorText(simpleOrientationSensor.GetCurrentOrientation());
+                simpleOrientationSensor.OrientationChanged += OnSimpleOrientationChanged;
+            }
         }
+
+        async private void OnSimpleOrientationChanged(SimpleOrientationSensor sender, 
+            SimpleOrientationSensorOrientationChangedEventArgs args)
+        {
+            await this.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            {
+                SetOrientationSensorText(args.Orientation);
+            });
+        }
+
+        private void SetOrientationSensorText(SimpleOrientation simpleOrientation)
+        {
+            orientationSensorTextBlock.Text = simpleOrientation.ToString();
+        }
+
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.GoBack();
@@ -75,6 +99,7 @@ namespace SpecApp
                               displayInformation.ResolutionScale,
                               displayInformation.LogicalDpi,
                               pixelWidth, pixelHeight);
+            displayOrientationTextBlock.Text = displayInformation.CurrentOrientation.ToString();
         }
     }
 }

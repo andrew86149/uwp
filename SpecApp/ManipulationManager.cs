@@ -15,12 +15,17 @@ namespace SpecApp
         MatrixTransform matrixXform;
         CompositeTransform compositeXform;
 
-        public ManipulationManager()
+        public ManipulationManager() : this(new CompositeTransform())
+        {
+        }
+
+        public ManipulationManager(CompositeTransform initialTransform)
         {
             xformGroup = new TransformGroup();
             matrixXform = new MatrixTransform();
             xformGroup.Children.Add(matrixXform);
-            compositeXform = new CompositeTransform();
+            //compositeXform = new CompositeTransform();
+            compositeXform = initialTransform;
             xformGroup.Children.Add(compositeXform);
             this.Matrix = Matrix.Identity;
         }

@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="SpecApp.Page0"
+    x:Class="SpecApp.Page20"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:SpecApp"
@@ -15,16 +15,13 @@
         </Grid.RowDefinitions>
         <CommandBar>
             <AppBarButton Icon="Back" Click="AppBarButton_Click"/>
+            <AppBarButton Icon="Emoji" Click="AppBarButton_Click"/>
+            <AppBarButton Icon="Emoji2" Click="AppBarButton_Click"/>
+            <AppBarButton Icon="Emoji2" Click="AppBarButton_Click"/>
             <CommandBar.Content>
                 <TextBlock Name="pname" Margin="5" FontSize="32"/>
             </CommandBar.Content>
         </CommandBar>
-        <StackPanel Grid.Row="1">
-            <TextBlock Name="textBlock" HorizontalAlignment="Center"/>
-            <TextBlock Text="SimpleOrientationSensor:&#x00A0;" HorizontalAlignment="Center"/>
-            <TextBlock Name="orientationSensorTextBlock" HorizontalAlignment="Center"/>
-            <TextBlock Text="DisplayProperties.CurrentOrientation:&#x00A0;" HorizontalAlignment="Center"/>
-            <TextBlock Name="displayOrientationTextBlock" HorizontalAlignment="Center"/>
-        </StackPanel>
+
     </Grid>
 </Page>

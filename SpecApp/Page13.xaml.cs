@@ -31,7 +31,7 @@ namespace SpecApp
         double dpiX, dpiY;
 
         WriteableBitmap bitmap;
-        Stream pixelStream;
+        private Stream pixelStream;
         byte[] srcPixels;
         byte[] dstPixels;
 
@@ -216,7 +216,8 @@ namespace SpecApp
                 pixelStream = bitmap.PixelBuffer.AsStream();
                 //using (Stream pixelStream = bitmap.PixelBuffer.AsStream())
                 //{
-                //    await pixelStream.WriteAsync(pixels, 0, pixels.Length);
+                    //await pixelStream.WriteAsync(pixels, 0, pixels.Length);
+                //    await pixelStream.WriteAsync(dstPixels, 0, dstPixels.Length);
                 //}
 
                 // Invalidate the WriteableBitmap and set as Image source

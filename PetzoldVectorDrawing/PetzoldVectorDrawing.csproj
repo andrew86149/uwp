@@ -120,6 +120,11 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ArcSegment2.cs" />
+    <Compile Include="IGeometrySegment.cs" />
+    <Compile Include="LineSegment2.cs" />
+    <Compile Include="RoundCappedLine.cs" />
+    <Compile Include="RoundCappedPath.cs" />
     <Compile Include="Vector2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\PetzoldVectorDrawing.rd.xml" />

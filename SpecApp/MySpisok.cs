@@ -29,6 +29,12 @@ namespace SpecApp
             spis[10] = "DialSketch";
             spis[11] = "CustomGradient";
             spis[12] = "RadialGrBrDemo";
+            spis[13] = "Posterizer";
+            spis[14] = "FingerPaint";
+            spis[15] = "ReversePaint";
+            spis[16] = "PhotoScatter";
+            spis[17] = "Camera";
+            spis[18] = "Orientation";
         }
     }
 }

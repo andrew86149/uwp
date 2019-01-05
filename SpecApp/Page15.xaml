@@ -22,5 +22,10 @@
                 <TextBlock Name="pname" Margin="5" FontSize="32"/>
             </CommandBar.Content>
         </CommandBar>
+        <Grid Grid.Row="1">
+            <Image Source="PetzoldJersey.jpg" />
+            <Image Name="whiteImage" />
+
+        </Grid>
     </Grid>
 </Page>

@@ -99,19 +99,54 @@ namespace SpecApp
                         this.Frame.Navigate(typeof(Page12));
                         break;
                     }
-                case "test13":
+                case "Posterizer":
                     {
                         this.Frame.Navigate(typeof(Page13));
                         break;
                     }
-                case "test14":
+                case "FingerPaint":
                     {
                         this.Frame.Navigate(typeof(Page14));
                         break;
                     }
-                case "test15":
+                case "ReversePaint":
                     {
                         this.Frame.Navigate(typeof(Page15));
+                        break;
+                    }
+                case "PhotoScatter":
+                    {
+                        this.Frame.Navigate(typeof(Page16));
+                        break;
+                    }
+                case "Camera":
+                    {
+                        this.Frame.Navigate(typeof(Page17));
+                        break;
+                    }
+                case "Orientation":
+                    {
+                        this.Frame.Navigate(typeof(Page18));
+                        break;
+                    }
+                case "test19":
+                    {
+                        this.Frame.Navigate(typeof(Page19));
+                        break;
+                    }
+                case "test20":
+                    {
+                        this.Frame.Navigate(typeof(Page20));
+                        break;
+                    }
+                case "test21":
+                    {
+                        this.Frame.Navigate(typeof(Page21));
+                        break;
+                    }
+                case "test22":
+                    {
+                        this.Frame.Navigate(typeof(Page22));
                         break;
                     }
                 default:
