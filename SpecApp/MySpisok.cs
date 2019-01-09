@@ -35,6 +35,13 @@ namespace SpecApp
             spis[16] = "PhotoScatter";
             spis[17] = "Camera";
             spis[18] = "Orientation";
+            spis[19] = "BubbleLevel";
+            spis[20] = "TiltAndRoll";
+            spis[21] = "TiltAndBounce";
+            spis[22] = "SimpleCompass";
+            spis[23] = "YawPitchRoll";
+            spis[24] = "AxisAngleRotation";
+            spis[25] = "PageVideoYoutube";
         }
     }
 }

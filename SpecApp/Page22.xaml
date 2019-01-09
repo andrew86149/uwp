@@ -22,5 +22,24 @@
                 <TextBlock Name="pname" Margin="5" FontSize="32"/>
             </CommandBar.Content>
         </CommandBar>
+        <Grid Grid.Row="1">
+            <Canvas HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+                <Path Fill="Magenta"
+                  Data="M -10 0 L 10 0, 10 -300, 0 -350, -10 -300 Z">
+                    <Path.RenderTransform>
+                        <RotateTransform x:Name="magNorthRotate" />
+                    </Path.RenderTransform>
+                </Path>
+
+                <Path Name="trueNorthPath"
+                  Fill="Blue"
+                  Data="M -10 0 L 10 0, 10 -300, 0 -350, -10 -300 Z">
+                    <Path.RenderTransform>
+                        <RotateTransform x:Name="trueNorthRotate" />
+                    </Path.RenderTransform>
+                </Path>
+            </Canvas>
+        </Grid>
     </Grid>
 </Page>

@@ -129,24 +129,54 @@ namespace SpecApp
                         this.Frame.Navigate(typeof(Page18));
                         break;
                     }
-                case "test19":
+                case "BubbleLevel":
                     {
                         this.Frame.Navigate(typeof(Page19));
                         break;
                     }
-                case "test20":
+                case "TiltAndRoll":
                     {
                         this.Frame.Navigate(typeof(Page20));
                         break;
                     }
-                case "test21":
+                case "TiltAndBounce":
                     {
                         this.Frame.Navigate(typeof(Page21));
                         break;
                     }
-                case "test22":
+                case "SimpleCompass":
                     {
                         this.Frame.Navigate(typeof(Page22));
+                        break;
+                    }
+                case "YawPitchRoll":
+                    {
+                        this.Frame.Navigate(typeof(Page23));
+                        break;
+                    }
+                case "AxisAngleRotation":
+                    {
+                        this.Frame.Navigate(typeof(Page24));
+                        break;
+                    }
+                case "PageVideoYoutube":
+                    {
+                        this.Frame.Navigate(typeof(Page25));
+                        break;
+                    }
+                case "test26":
+                    {
+                        this.Frame.Navigate(typeof(Page26));
+                        break;
+                    }
+                case "test27":
+                    {
+                        this.Frame.Navigate(typeof(Page27));
+                        break;
+                    }
+                case "test28":
+                    {
+                        this.Frame.Navigate(typeof(Page28));
                         break;
                     }
                 default:

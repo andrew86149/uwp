@@ -22,6 +22,12 @@
                 <TextBlock Name="pname" Margin="5" FontSize="32"/>
             </CommandBar.Content>
         </CommandBar>
-
+        <Grid Grid.Row="1">
+            <Path Fill="Red">
+                <Path.Data>
+                    <EllipseGeometry x:Name="ball" />
+                </Path.Data>
+            </Path>
+        </Grid>
     </Grid>
 </Page>

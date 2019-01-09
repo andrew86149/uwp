@@ -22,5 +22,28 @@
                 <TextBlock Name="pname" Margin="5" FontSize="32"/>
             </CommandBar.Content>
         </CommandBar>
+        <Grid Name="centeredGrid" Grid.Row="1"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Center">
+            <Ellipse Name="outerCircle"
+                     Stroke="{StaticResource ApplicationForegroundThemeBrush}" />
+
+            <Ellipse Name="halfCircle"
+                     Stroke="{StaticResource ApplicationForegroundThemeBrush}" />
+
+            <Ellipse Width="24"
+                     Height="24"
+                     Stroke="{StaticResource ApplicationForegroundThemeBrush}" />
+
+            <Ellipse Fill="Red"
+                     Width="24"
+                     Height="24"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center">
+                <Ellipse.RenderTransform>
+                    <TranslateTransform x:Name="bubbleTranslate" />
+                </Ellipse.RenderTransform>
+            </Ellipse>
+        </Grid>
     </Grid>
 </Page>
